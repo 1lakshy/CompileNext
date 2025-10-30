@@ -127,12 +127,9 @@ function App() {
             outputName: "app",
             mainClass: "Main"
           });
-          
           addToConsole('WebAssembly generation completed\n');
-          
           let wasmBytes = null;
           let capturedOutput = '';
-          
           try {
             wasmBytes = compiler.getWebAssemblyOutputFile("app.wasm");
             if (wasmBytes && wasmBytes.length > 0) {
